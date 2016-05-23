@@ -1,0 +1,127 @@
+@import "reset";
+
+@import "reset_buttons";
+
+@import "svg_wrappers";
+
+@import "mediaqueries";
+
+body {
+    background-color: $background_color;
+    color: $main_font_color;
+    font-family: $font_stack;
+}
+.radio_widget {
+    @include sizing(90%, 95vh);
+    max-width: 320px;
+    max-height: 660px;
+    margin: 1em auto;
+}
+.container {
+    width: 85%;
+    margin: 0 auto;
+    @include flexYCentered(space-between);
+}
+nav {
+    background-color: $nav_color;
+    font-size: $main_font_size;
+    color: $nav_font_color;
+    height: 16%;
+    border-radius: $top_radius;
+    @include flexYCentered(center);
+    .go_back {
+        @include sizing(0.6em, 0.6em);
+        border-left: 0.1em solid $nav_font_color;
+        border-top: 0.1em solid $nav_font_color;
+        transform: rotate(-45deg);
+    }
+    h1 {
+        @include bolderUpperCase;
+    }
+    .turn_off {
+        width: 1em;
+    }
+}
+.radiostations_list {
+    height: 68%;
+    background-color: $section_background_color;
+    color: $section_font_color;
+    font-size: $main_font_size;
+    overflow-y: auto;
+    ul {
+        width: 100%;
+        margin-top: 0.5em;
+    }
+}
+.radio_item {
+    padding: 0.4em 0;
+    .radiostation {
+        color: inherit;
+    }
+    .radio_name {
+        float: left;
+        margin-bottom: 0.4em;
+    }
+    .radio_fm {
+        float: right;
+        margin-bottom: 0.4em;
+    }
+    //create a divider for all, except the last item
+    &:not(:last-child)::after {
+        content: "";
+        display: block;
+        clear: both;
+        width: 100%;
+        height: 1px;
+        background-color: $section_font_color;
+    }
+}
+.radio_fm {
+    font-weight: $bolder_font;
+}
+.hidden {
+    display: none;
+}
+.radio_controls {
+    @include flexYCentered(space-between);
+    width: 100%;
+    margin-bottom: 0.8em;
+    .minus_button {
+        @include minusSign(60%, 8%);
+    }
+    .plus_button {
+        @include pluSign(60%, 8%);
+    }
+    .picture_container {
+        @include sizing(5em, 5em);
+        @include circleShape;
+        border: 1px solid $section_font_color;
+        background-image: url("../images/radio_icon.png");
+        @include backgroundImage;
+        //in case the image is not loaded
+        background-color: $section_font_color;
+    }
+}
+footer {
+    height: 16%;
+    border-top: 1px solid $section_font_color;
+    border-radius: $bottom_radius;
+    background-color: $footer_background_color;
+    @include flexYCentered(center);
+    @include boxShadow ($section_line_color);
+    .current_radio {
+        visibility: hidden;
+        text-align: center;
+    }
+    h2 {
+        font-size: $smaller_font_size;
+        @include bolderUpperCase;
+        color: $nav_color;
+        margin-bottom: 0.3em;
+    }
+    .current_radio_name {
+        text-align: center;
+        font-size: $main_font_size;
+        color: $section_font_color;
+    }
+}

@@ -1,0 +1,319 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+/* line 6, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  font-weight: normal;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+/* line 28, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* line 32, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+body {
+  line-height: 1;
+}
+
+/* line 35, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+ol, ul {
+  list-style: none;
+}
+
+/* line 38, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+blockquote, q {
+  quotes: none;
+}
+
+/* line 41, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+/* line 46, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset.scss */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* line 1, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_reset_buttons.scss */
+button {
+  -webkit-box-sizing: content-box;
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  background: none;
+  border: 0;
+  color: inherit;
+  cursor: pointer;
+  font: inherit;
+  line-height: normal;
+  overflow: visible;
+  padding: 0;
+  -webkit-appearance: button;
+}
+
+/* line 1, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_svg_wrappers.scss */
+svg {
+  width: 100%;
+}
+
+/* line 3, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_svg_wrappers.scss */
+svg .path1, svg .path2 {
+  fill: #ffffff;
+  fill-rule: evenodd;
+}
+
+/* Tablets and bigger mobiles */
+@media only screen and (min-width: 460px) {
+  /* line 4, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_mediaqueries.scss */
+  .radio_widget {
+    min-height: 500px;
+  }
+}
+
+/* line 9, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+body {
+  background-color: #030303;
+  color: #a2abbd;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+/* line 14, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_widget {
+  width: 90%;
+  height: 95vh;
+  max-width: 320px;
+  max-height: 660px;
+  margin: 1em auto;
+}
+
+/* line 20, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.container {
+  width: 85%;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+/* line 25, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+nav {
+  background-color: #edad61;
+  font-size: 1.5rem;
+  color: #ffffff;
+  height: 16%;
+  border-radius: 1.5em 1.5em 0 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* line 32, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+nav .go_back {
+  width: 0.6em;
+  height: 0.6em;
+  border-left: 0.1em solid #ffffff;
+  border-top: 0.1em solid #ffffff;
+  transform: rotate(-45deg);
+}
+
+/* line 38, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+nav h1 {
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+/* line 41, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+nav .turn_off {
+  width: 1em;
+}
+
+/* line 45, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radiostations_list {
+  height: 68%;
+  background-color: #2f2f3a;
+  color: #a2abbd;
+  font-size: 1.5rem;
+  overflow-y: auto;
+}
+
+/* line 51, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radiostations_list ul {
+  width: 100%;
+  margin-top: 0.5em;
+}
+
+/* line 56, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_item {
+  padding: 0.4em 0;
+}
+
+/* line 58, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_item .radiostation {
+  color: inherit;
+}
+
+/* line 61, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_item .radio_name {
+  float: left;
+  margin-bottom: 0.4em;
+}
+
+/* line 65, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_item .radio_fm {
+  float: right;
+  margin-bottom: 0.4em;
+}
+
+/* line 70, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_item:not(:last-child)::after {
+  content: "";
+  display: block;
+  clear: both;
+  width: 100%;
+  height: 1px;
+  background-color: #a2abbd;
+}
+
+/* line 79, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_fm {
+  font-weight: 700;
+}
+
+/* line 82, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.hidden {
+  display: none;
+}
+
+/* line 85, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  margin-bottom: 0.8em;
+}
+
+/* line 89, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_controls .minus_button {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 1px solid #a2abbd;
+}
+
+/* line 40, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/modules/_mixins.scss */
+.radio_controls .minus_button::before {
+  content: "";
+  position: absolute;
+  background-color: #a2abbd;
+  width: 60%;
+  height: 8%;
+  top: 46%;
+  left: 20%;
+}
+
+/* line 92, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_controls .plus_button {
+  position: relative;
+  width: 1em;
+  height: 1em;
+  border-radius: 50%;
+  border: 1px solid #a2abbd;
+}
+
+/* line 40, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/modules/_mixins.scss */
+.radio_controls .plus_button::before {
+  content: "";
+  position: absolute;
+  background-color: #a2abbd;
+  width: 60%;
+  height: 8%;
+  top: 46%;
+  left: 20%;
+}
+
+/* line 50, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/modules/_mixins.scss */
+.radio_controls .plus_button::after {
+  content: "";
+  position: absolute;
+  background-color: #a2abbd;
+  width: 8%;
+  height: 60%;
+  top: 20%;
+  left: 46%;
+}
+
+/* line 95, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+.radio_controls .picture_container {
+  width: 5em;
+  height: 5em;
+  border-radius: 50%;
+  border: 1px solid #a2abbd;
+  background-image: url("../images/radio_icon.png");
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  background-color: #a2abbd;
+}
+
+/* line 105, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+footer {
+  height: 16%;
+  border-top: 1px solid #a2abbd;
+  border-radius: 0 0 1.5em 1.5em;
+  background-color: #22222b;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-shadow: 0 3px 2px #2b2b36;
+  -moz-box-shadow: 0 3px 2px #2b2b36;
+  box-shadow: 0 3px 2px #2b2b36;
+}
+
+/* line 112, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+footer .current_radio {
+  visibility: hidden;
+  text-align: center;
+}
+
+/* line 116, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+footer h2 {
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #edad61;
+  margin-bottom: 0.3em;
+}
+
+/* line 122, C:/Users/Komp Ostrego/Desktop/Coders_lab/radio_widget/scss/partials/_base.scss */
+footer .current_radio_name {
+  text-align: center;
+  font-size: 1.5rem;
+  color: #a2abbd;
+}

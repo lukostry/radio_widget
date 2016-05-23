@@ -1,0 +1,57 @@
+@mixin boxShadow($color) {
+    -webkit-box-shadow: 0 3px 2px $color;
+    -moz-box-shadow: 0 3px 2px $color;
+    box-shadow: 0 3px 2px $color;
+}
+@mixin sizing($width, $height) {
+    width: $width;
+    height: $height;
+}
+//rules that ensure that background image is centered and properly displayed
+@mixin backgroundImage {
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: cover;
+}
+@mixin circleShape {
+    border-radius: 50%;
+}
+@mixin bolderUpperCase {
+    font-weight: $bolder_font;
+    text-transform: uppercase;
+}
+//mixin for flexboxes that are centered on the y-axis, the x-axis will be passed as an arument
+@mixin flexYCentered($position) {
+    display: flex;
+    align-items: center;
+    justify-content: $position;
+}
+@mixin controlsPseudoElements {
+    content: "";
+    // display: inline-block;
+    position: absolute;
+    background-color: $section_font_color;
+}
+@mixin minusSign ($width, $stroke_width) {
+    position: relative;
+    @include sizing(1em, 1em);
+    @include circleShape;
+    border: 1px solid $section_font_color;
+    &::before {
+        @include controlsPseudoElements;
+        width: $width;
+        height: $stroke_width;
+        top: (100% - $stroke_width)/2;
+        left: (100% - $width)/2;
+    }
+}
+@mixin pluSign ($width, $stroke_width) {
+    @include minusSign($width, $stroke_width);
+    &::after {
+        @include controlsPseudoElements;
+        width: $stroke_width;
+        height: $width;
+        top: (100% - $width)/2;
+        left: (100% - $stroke_width)/2;
+    }
+}
